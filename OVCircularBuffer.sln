@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVCircularBuffer", "OVCircularBuffer\OVCircularBuffer.csproj", "{6D2B483D-A271-4F85-8430-712B9BC5127D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVCircularBufferTests", "OVCircularBufferTests\OVCircularBufferTests.csproj", "{02A36478-F8DE-4BC4-A986-DF86FCD07390}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D2B483D-A271-4F85-8430-712B9BC5127D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2B483D-A271-4F85-8430-712B9BC5127D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2B483D-A271-4F85-8430-712B9BC5127D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2B483D-A271-4F85-8430-712B9BC5127D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A36478-F8DE-4BC4-A986-DF86FCD07390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A36478-F8DE-4BC4-A986-DF86FCD07390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A36478-F8DE-4BC4-A986-DF86FCD07390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A36478-F8DE-4BC4-A986-DF86FCD07390}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F63E089-6140-42EA-84D5-08D36CE0AB04}
+	EndGlobalSection
+EndGlobal

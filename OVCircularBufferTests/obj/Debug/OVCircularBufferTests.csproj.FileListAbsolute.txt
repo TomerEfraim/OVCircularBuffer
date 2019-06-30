@@ -1,0 +1,16 @@
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\OVCircularBufferTests.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\OVCircularBufferTests.pdb
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\OVCircularBuffer.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\OVCircularBuffer.pdb
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\obj\Debug\OVCircularBufferTests.csprojAssemblyReference.cache
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\obj\Debug\OVCircularBufferTests.csproj.CoreCompileInputs.cache
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\obj\Debug\OVCircularBufferTests.csproj.CopyComplete
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\obj\Debug\OVCircularBufferTests.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBufferTests\obj\Debug\OVCircularBufferTests.pdb

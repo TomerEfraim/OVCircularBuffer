@@ -1,0 +1,6 @@
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBuffer\bin\Debug\OVCircularBuffer.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBuffer\bin\Debug\OVCircularBuffer.pdb
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBuffer\obj\Debug\OVCircularBuffer.csprojAssemblyReference.cache
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBuffer\obj\Debug\OVCircularBuffer.csproj.CoreCompileInputs.cache
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBuffer\obj\Debug\OVCircularBuffer.dll
+E:\tomer\OVCircularBuffer\OVCircularBuffer\OVCircularBuffer\obj\Debug\OVCircularBuffer.pdb
