@@ -142,5 +142,50 @@ namespace OVCircularBuffer
                 Count = 0;
             }
         }
+
+        public virtual bool TryGetMax(out T max)
+        {
+            lock (_lock)
+            {
+                try
+                {
+                    if (IsEmpty)
+                    {
+                        max = default;
+                        return false;
+                    }
+                    max = _buffer.Max();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    max = default;
+                    return false;
+                }
+            }
+        }
+
+        public virtual bool TryGetMin(out T min)
+        {
+            lock (_lock)
+            {
+                try
+                {
+                    if (IsEmpty)
+                    {
+                        min = default;
+                        return false;
+                    }
+                    min = _buffer.Min();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    min = default;
+                    return false;
+                }
+            }
+        }
+
     }
 }

@@ -15,22 +15,48 @@ namespace OVCircularBuffer.Tests
         [TestMethod()]
         public void Test1()
         {
-            OVCircularBuffer<string> instance = new OVCircularBuffer<string>(3);
+            OVCircularBuffer<string> buffer = new OVCircularBuffer<string>(3);
+
+            Assert.AreEqual(3, buffer.BufferSize);
+            Assert.IsTrue(buffer.IsEmpty);
+            Assert.IsFalse(buffer.IsFull);
 
             string[] data = { "This", "is" };
 
-            instance.Enqueue(data[0]);
-            instance.Enqueue(data[1]);
+            buffer.Enqueue(data[0]);
+            buffer.Enqueue(data[1]);
 
-            bool result = instance.TryDequeue(out string output0);
-            Assert.AreEqual(result, true);
-            Assert.AreEqual(data[0], output0);
+            Assert.AreEqual(3, buffer.BufferSize);
+            Assert.IsFalse(buffer.IsEmpty);
+            Assert.IsFalse(buffer.IsFull);
+            Assert.AreEqual(2, buffer.Count);
 
-            result = instance.TryDequeue(out string output1);
-            Assert.AreEqual(result, true);
-            Assert.AreEqual(data[1], output1);
+            buffer.Enqueue(data[0]);
 
-            Assert.IsTrue(instance.IsEmpty);
+            Assert.IsTrue(buffer.IsFull);
+            Assert.AreEqual(3, buffer.Count);
+
+            buffer.Enqueue(data[1]);
+
+            Assert.IsTrue(buffer.IsFull);
+            Assert.AreEqual(3, buffer.Count);
+
+            bool result = buffer.TryDequeue(out string output);
+
+            Assert.IsFalse(buffer.IsFull);
+            Assert.IsTrue(result);
+            Assert.AreEqual(data[1], output);
+
+            result = buffer.TryDequeue(out output);
+
+            Assert.IsTrue(result);
+            Assert.AreEqual(data[0], output);
+            Assert.IsFalse(buffer.IsEmpty);
+
+            result = buffer.TryDequeue(out output);
+
+            Assert.IsTrue(result);
+            Assert.AreEqual(data[1], output);
         }
 
         public static void ProduceLoop(object obj)
@@ -89,13 +115,65 @@ namespace OVCircularBuffer.Tests
 
             Task.Delay(100).Wait();
 
-
             consumeTask.Start();
 
+            produceTask.Wait(5000);
+            consumeTask.Wait(5000);
+        }
 
+        [TestMethod()]
+        public void Test3()
+        {
+            OVCircularBuffer<int> buffer = new OVCircularBuffer<int>(4);
 
-            produceTask.Wait();
-            consumeTask.Wait();
+            CollectionAssert.AreEqual(new int[0], buffer.ToArray());
+
+            buffer.Enqueue(1);
+
+            CollectionAssert.AreEqual(new int[1] { 1 }, buffer.ToArray());
+
+            buffer.Enqueue(2);
+            buffer.Enqueue(3);
+            buffer.Enqueue(4);
+            buffer.Enqueue(5);
+
+            CollectionAssert.AreEqual(new int[4] { 2, 3, 4, 5 }, buffer.ToArray());
+
+            bool success = buffer.TryDequeue(out int dequeued);
+
+            Assert.AreEqual(true, success);
+            Assert.AreEqual(2, dequeued);
+            CollectionAssert.AreEqual(new int[3] { 3, 4, 5 }, buffer.ToArray());
+
+            buffer.TryDequeue(out dequeued);
+            buffer.TryDequeue(out dequeued);
+            success = buffer.TryDequeue(out dequeued);
+
+            Assert.AreEqual(true, success);
+            Assert.AreEqual(5, dequeued);
+            CollectionAssert.AreEqual(new int[0], buffer.ToArray());
+
+            success = buffer.TryDequeue(out dequeued);
+
+            Assert.AreEqual(false, success);
+            Assert.AreEqual(0, dequeued);
+            CollectionAssert.AreEqual(new int[0], buffer.ToArray());
+        }
+
+        [TestMethod()]
+        public void Test4()
+        {
+            OVCircularBuffer<string> buffer = new OVCircularBuffer<string>(10);
+
+            bool success = buffer.TryGetMax(out string max);
+
+            Assert.AreEqual(false, success);
+            Assert.AreEqual(null, max);
+
+            success = buffer.TryGetMin(out string min);
+
+            Assert.AreEqual(false, success);
+            Assert.AreEqual(null, min);
         }
     }
 }
